@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<ul>
+{% for item in teachings %}
+	<li><a href="{% url 'teaching_detail' item.id %}">{{ item.title }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

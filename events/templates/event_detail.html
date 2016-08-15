@@ -1,0 +1,22 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<div class="portlet light">
+    <div class="portlet-title portlet box blue-chambray">
+      <div class="caption">
+        <i class="icon-microphone font-purple-plum"></i>
+        <span class="caption-subject bold font-purple-seance uppercase">
+        {{events.name}} </span>
+      </div>
+    </div>
+    <div class="portlet-body">
+      <div class="scroller" style="height:400px" data-always-visible="1" data-rail-visible="1" data-rail-color="red" data-handle-color="green">
+        <p>{{events.theme_verse}}</p>
+        <p>{{events.verse}}</p>
+<h1 style="font-size: 19.5px;" class="post-title cufon_headings">{{events.theme}}</h1>
+on <p>{{events.date}}</p> at <p>{{events.time}}.</p> <p>The venue is {{events.location}}</p>
+<p>{{events.details}}</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

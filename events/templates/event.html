@@ -1,0 +1,41 @@
+{% extends "base.html" %} 
+
+{% block content %}
+   <div class="portlet light">
+				<div class="portlet-body">
+					<div class="row">
+					{% for item in events %}
+						<div class="col-md-12">
+							<ul class="timeline">
+<li class="timeline-yellow">
+									<div class="timeline-time">
+										<span class="date">
+										{{item.date}} </span>
+										<span class="time">
+										{{item.time}} </span>
+									</div>
+									<div class="timeline-icon">
+										<i class="fa fa-trophy"></i>
+									</div>
+									<div class="timeline-body">
+										<h2>{{item.name}} <!--  <small><em>"{{item.theme}}"</em></small> --></h2>
+										<div class="timeline-content">
+											<!-- <img class="timeline-img pull-left" src="img/my.jpg" alt=""> -->
+											<h3>{{item.theme}}</h3>
+											<h3>{{item.location}}</h3>
+										</div>
+										<div class="timeline-footer">
+											<a href="{% url 'event_detail' item.id %}" class="nav-link pull-right">
+											Read more <i class="m-icon-swapright m-icon-white"></i>
+											</a>
+										</div>
+									</div>
+								</li>
+								</ul>
+								</div>
+								{% endfor %}
+								</div>
+								</div>
+								</div>
+								
+{% endblock %}

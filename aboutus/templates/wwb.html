@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}  
+  <h1 class="page-header text-center" style="color: white; margin-bottom: 10px;">The Baptist Faith and Message 2000</h1>
+  <p><b>Southern Baptists have prepared a statement of generally held convictions called The Baptist Faith and Message. It serves as a guide to understanding who we are.</b></p>
+  <div class="row">
+  {% for item in wwbs %}
+    <div class="portlet light col-md-4">
+    <div class="portlet box blue-chambray">
+  <div class="portlet-title">
+    <div class="caption">
+      <span class="caption-subject bold font-purple-seance uppercase">{{item.title}}</span>
+    </div>
+    <div class="actions">
+    <a href="javascript:;" class="btn btn-circle btn-default btn-sm btn-icon-only fullscreen"></a>
+  </div>
+  </div>
+  <div class="portlet-body">
+    <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1" data-rail-color="red" data-handle-color="green">
+      <p class="font-purple-plum">{{item.content}}</p>
+        <p>{{item.verses}}.</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        {% endfor %}
+        </div>
+  
+{% endblock %}

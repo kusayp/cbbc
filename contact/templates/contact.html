@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="portlet light">
+	<div class="portlet-body">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- Google Map -->
+				<div class="row">
+					<div id="map" class="gmaps margin-bottom-40" style="height:400px;">
+					</div>
+				</div> 
+				<div class="row margin-bottom-20">
+				{% for item in address %}
+					<div class="col-md-6">
+						<div class="space20">
+						</div>
+						<h3 class="form-section">Contacts</h3>
+						<p>
+							 {{item.notesadd}}
+						</p>
+						<div class="well">
+							<h4>Address</h4>
+							<address>
+							<strong>{{item.name}}</strong><br>
+							 {{item.box}}<br>
+							<abbr title="Phone">P:</abbr> {{item.phone}}</address>
+							<address>
+							<strong>Email</strong><br>
+							<a href="mailto:#">
+							{{item.email}} </a>
+							</address>
+							<address>
+    							<strong>Location</strong><br>
+    								{{item.location}}
+    						</address>
+							<ul class="social-icons margin-bottom-10">
+								<li>
+									<a href="javascript:;" data-original-title="facebook" class="facebook">
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-original-title="Goole Plus" class="googleplus">
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-original-title="skype" class="skype">
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-original-title="twitter" class="twitter">
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-original-title="youtube" class="youtube">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					{% endfor %}
+					<div class="col-md-6">
+						<div class="space20">
+						</div>
+						<!-- BEGIN FORM-->
+						<form method="POST" action="." role="form">{% csrf_token %}
+							<h3 class="form-section">Feedback</h3>
+							{% for item in address %}
+							<p>
+								 {{item.notesadd}}<!-- Please send us a feedback or a prayer request for the church to pray on your behalf -->
+							{% endfor %}
+							</p>
+							<div class="form-group">
+								<div class="input-icon">
+									<i class="fa fa-check"></i>
+									{{ form.name }}
+									{{ form.name.errors }}
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-icon">
+									<i class="fa fa-user"></i>
+									{{ form.email }}
+									{{ form.email.errors }}
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-icon">
+									<i class="fa fa-envelope"></i>
+									{{ form.phone }}
+									{{ form.phone.errors }}
+								</div>
+							</div>
+							<div class="form-group">
+							<label for="id_topic" style="display: block;">Prayer Request?:</label>
+								<div class="input-icon">
+									{{ form.is_prayer_request }}
+									{{ form.is_prayer_request.errors }}
+								</div>
+							</div>
+							<div class="form-group">
+								{{ form.content }}
+								{{ form.content.errors }}
+							</div>
+							<button type="submit" class="btn green">Submit</button>
+						</form>
+						<!-- END FORM-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <form method="POST" action="." role="form">{% csrf_token %}
+	<div class="form-body">
+		<div class="form-group">
+			{{ form.name.errors }}
+			<label for="exampleInputEmail1">Email address</label>
+			{{ form.name }}
+		</div>
+		<div class="form-group">
+			{{ form.email.errors }}
+			<label for="id_topic">Kind of feedback:</label>
+			{{ form.email }}
+		</div>
+		<div class="form-group">
+			{{ form.phone.errors }}
+			<label for="id_topic">Kind of feedback:</label>
+			{{ form.phone }}
+		</div>
+		<div class="form-group">
+			{{ form.is_prayer_request.errors }}
+			<label for="id_topic">Prayer Request?:</label>
+			{{ form.is_prayer_request }}
+		</div>
+		<div class="form-group">
+			{{ form.content.errors }}
+			<label for="id_topic">Content:</label>
+			{{ form.content}}
+		</div>
+		<input type="submit" value="Submit">
+	</div>
+ --><!-- </form> -->
+{% endblock %}

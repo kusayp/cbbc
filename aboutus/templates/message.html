@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+{% for item in messages %}
+<div class="portlet light">
+    <div class="portlet-title portlet box blue-chambray">
+      <div class="caption">
+        <i class="icon-microphone font-purple-plum"></i>
+        <span class="caption-subject bold font-purple-seance uppercase">
+        {{ title }} </span>
+        <!-- <span class="caption-helper">  Men Fellowship</span> -->
+      </div>
+    </div>
+    <div class="portlet-body">
+      <div class="scroller" style="height:700px" data-always-visible="1" data-rail-visible="1" data-rail-color="red" data-handle-color="green">
+        <p>{{item.content}}.</p>
+        <h3>List of verses that talks to us about Salvation</h3>
+<p>{{item.verses}}.</p>
+<center><iframe src="http://player.vimeo.com/video/22439234" webkitallowfullscreen="" allowfullscreen="" frameborder="0" height="375" width="500"></iframe></center><p></p>
+</div>
+    </div>
+  </div>
+  {% endfor %}
+  {% endblock %}
+  <!-- <iframe src="http://player.vimeo.com/video/22439234" style="width:100%; height:327px;border:0" allowfullscreen>
+                </iframe> -->
