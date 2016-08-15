@@ -6,9 +6,9 @@
 <div class="portlet light">
           <div class="portlet-body">
             <div class="row margin-bottom-30">
-            {% for item in titles %}
-            <div class="col-md-6">
             
+            <div class="col-md-6">
+            {% for item in titles %}
               <h2>{{ item.title }}</h2> 
                 <p>
                 {{ item.content }}
@@ -39,8 +39,9 @@
                   </p>
                   <small>Pastor Siekbert</small>
                 </blockquote> -->
+                {% endfor %}
               </div>
-               {% endfor %}
+               
               <div class="col-md-6">
                 <!-- <iframe src="http://player.vimeo.com/video/22439234" style="width:100%; height:327px;border:0" allowfullscreen>
                 </iframe> -->
