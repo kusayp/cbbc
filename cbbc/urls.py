@@ -22,7 +22,6 @@ urlpatterns = [
     # url(r'^jet/', include('jet.urls', 'jet')),
     # url(r'^jet/dashboard', include('jet.dashboard.urls', 'jet-dashboard')),
     url(r'^admin/', admin.site.urls),
-    # url(r'^home/', include('home.urls')),
     url(r'^ministries/', include('ministries.urls')),
     url(r'^aboutus/', include('aboutus.urls')),
     url(r'^events/', include('events.urls')),
