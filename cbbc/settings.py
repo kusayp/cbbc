@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ajax_search',
+    # 'ajax_search',
     'aboutus',
     'contact',
     'events',
