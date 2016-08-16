@@ -44,7 +44,7 @@ class Stanza(models.Model):
      Model for Stanza
 
     """
-    content = models.CharField(max_length=1000)
+    content = models.TextField()
     hymn = models.ForeignKey(Hymn, related_name='stanzas')
     class Meta:
         verbose_name_plural = 'Stanzas'

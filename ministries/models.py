@@ -8,7 +8,7 @@ class Men(models.Model):
 
 	"""
 	name = models.CharField(max_length=100)
-	content = models.CharField(max_length=1000)
+	content = models.TextField()
 	time = models.CharField(max_length=100)
 	place = models.CharField(max_length=100)
 	notes = models.CharField(max_length=500)
@@ -22,7 +22,7 @@ class Women(models.Model):
 
 	"""
 	name = models.CharField(max_length=100)
-	content = models.CharField(max_length=1000)
+	content = models.TextField()
 	time = models.CharField(max_length=100)
 	place = models.CharField(max_length=100)
 	notes = models.CharField(max_length=500)
@@ -36,7 +36,7 @@ class Youth(models.Model):
 
 	"""
 	name = models.CharField(max_length=100)
-	content = models.CharField(max_length=1000)
+	content = models.TextField()
 	time = models.CharField(max_length=100)
 	place = models.CharField(max_length=100)
 	notes = models.CharField(max_length=500)
@@ -50,7 +50,7 @@ class Children(models.Model):
 
 	"""
 	name = models.CharField(max_length=100)
-	content = models.CharField(max_length=1000)
+	content = models.TextField()
 	time = models.CharField(max_length=100)
 	place = models.CharField(max_length=100)
 	notes = models.CharField(max_length=500)
