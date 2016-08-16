@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django_summernote.admin import SummernoteModelAdmin
 from django import forms
 from .models import *
 # Register your models here.
@@ -8,7 +9,7 @@ class ContactAdmin(admin.ModelAdmin):
 	class Meta:
 		model = Contact
 
-class AddressAdmin(admin.ModelAdmin):
+class AddressAdmin(SummernoteModelAdmin):
 	list_display = ["__str__", "name"]
 	class Meta:
 		model = Address

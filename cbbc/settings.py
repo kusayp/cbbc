@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'ajax_search',
+    'django_summernote',
     'aboutus',
     'contact',
     'events',
@@ -54,6 +54,11 @@ INSTALLED_APPS = [
 # AJAX_SEARCH_LIMIT = 8
 # AJAX_SEARCH_HELPER = 'hymn.views.hymn'
 # SEARCH_RESULT_TEMPLATE = 'hymn_ls.html'
+
+SUMMERNOTE_CONFIG = {
+    'width': '100%',
+    'height': '380',
+}
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',

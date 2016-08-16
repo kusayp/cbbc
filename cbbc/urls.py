@@ -29,5 +29,6 @@ urlpatterns = [
     url(r'^cont/', include('contact.urls')),
     url(r'^hymn/', include('hymn.urls')),
     # url(r'^ajax_search/',include('ajax_search.urls')),
+    url(r'^summernote/', include('django_summernote.urls')),
 ]
 

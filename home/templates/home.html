@@ -11,7 +11,7 @@
             {% for item in titles %}
               <h2>{{ item.title | safe }}</h2> 
                 <p>
-                {{ item.content | safe}}
+                {{ item.content | safe |truncatewords:100}}
                    <!-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. -->
                 </p>
                
@@ -34,7 +34,7 @@
                 </ul> -->
                 <blockquote class="hero">
                   <p>
-                     {{item.note|safe}}
+                     {{item.note|safe |truncatewords:100}}
                   </p>
                   <small>{{item.pastor|safe}}</small>
                 </blockquote>
@@ -88,7 +88,7 @@
             <h3>{{ item.name | safe }} / <small>{{ item.role }}</small></h3>
             <div class="team-info">
               <p>
-                 {{ item.background | safe |truncatewords:20 }}
+                 {{ item.background | safe |truncatewords:100 }}
                  <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
                   Read More
                 </button>

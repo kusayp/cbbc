@@ -1,24 +1,25 @@
 from django.contrib import admin
+from django_summernote.admin import SummernoteModelAdmin
 from .models import *
 # Register your models here.
 
 
-class MenAdmin(admin.ModelAdmin):
+class MenAdmin(SummernoteModelAdmin):
 	list_display = ["__str__"]
 	class Meta:
 		model = Men
 
-class WomenAdmin(admin.ModelAdmin):
+class WomenAdmin(SummernoteModelAdmin):
 	list_display = ["__str__"]
 	class Meta:
 		model = Women
 
-class YouthAdmin(admin.ModelAdmin):
+class YouthAdmin(SummernoteModelAdmin):
 	list_display = ["__str__"]
 	class Meta:
 		model = Youth
 
-class ChildrenAdmin(admin.ModelAdmin):
+class ChildrenAdmin(SummernoteModelAdmin):
 	list_display = ["__str__"]
 	class Meta:
 		model = Children
