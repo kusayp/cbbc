@@ -11,7 +11,7 @@ def contact(request):
 		if form.is_valid:
 			instance = form.save(commit=False)
 			instance.save()
-			return HttpResponseRedirect('/home/')
+			return HttpResponseRedirect('/')
 
 	else:
 		form = ContactForm()
