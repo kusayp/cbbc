@@ -51,10 +51,6 @@ INSTALLED_APPS = [
     'hymn',
 ]
 
-# AJAX_SEARCH_LIMIT = 8
-# AJAX_SEARCH_HELPER = 'hymn.views.hymn'
-# SEARCH_RESULT_TEMPLATE = 'hymn_ls.html'
-
 SUMMERNOTE_CONFIG = {
     'width': '100%',
     'height': '380',

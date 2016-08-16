@@ -6,7 +6,6 @@ def hymn(request):
 	details = Hymn.objects.order_by('name')
 	context = {
 		'titles' : details,
-		# 'searchform':SearchForm(),
 		'title': 'Hymn',
 	}
 	return render(request, 'hymn_ls.html', context)
