@@ -6,7 +6,7 @@ from resources.models import Devotion
 # Create your views here.
 def home(request):
 	details = Welcome.objects.order_by('-id')[:1]
-	pastors = Pastor.objects.order_by('-id')[:1]
+	pastors = Pastor.objects.order_by('-id')[:3]
 	events = Event.objects.order_by('-id')[:1]
 	context = {
 		'events' : events,
