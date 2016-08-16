@@ -12,7 +12,7 @@ class Sermon(models.Model):
     title= models.CharField(max_length=500)
     verse = models.CharField(max_length=1000, default='Hello')
     verse_name = models.CharField(max_length=100, default='Hello')
-    content =  models.CharField(max_length=5000)
+    content =  models.TextField()
     author = models.CharField(max_length=100)
 
     def __str__(self):
@@ -28,7 +28,7 @@ class Devotion(models.Model):
     principle = models.CharField(max_length=1000)
     verse_name = models.CharField(max_length=100)
     title= models.CharField(max_length=500)
-    content =  models.CharField(max_length=5000)
+    content =  models.TextField()
     
     def __str__(self):
         return self.title
@@ -39,7 +39,7 @@ class Teaching(models.Model):
      Model for Teaching
     """
     title= models.CharField(max_length=500)
-    content =  models.CharField(max_length=5000)
+    content =  models.TextField()
     
     def __str__(self):
         return self.title

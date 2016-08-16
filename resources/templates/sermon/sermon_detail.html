@@ -4,18 +4,18 @@
 							<div class="portlet-title">
 								<div class="caption font-green-sharp">
 									<i class="icon-speech font-green-sharp"></i>
-									<span class="caption-subject"> {{ sermons.title }}</span> by
-									<span class="caption-helper">{{ sermons.author }}</span>
+									<span class="caption-subject"> {{ sermons.title | safe }}</span> by
+									<span class="caption-helper">{{ sermons.author | safe }}</span>
 								</div>
 							</div>
 							<div class="portlet-body">
 								<div class="scroller" style="height:500px" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd">
-									<h4>{{ sermons.verse_name }}</h4>
+									<h4>{{ sermons.verse_name | safe }}</h4>
 									<em>
-										 {{ sermons.verse }}
+										 {{ sermons.verse | safe }}
 									</em><br><br><br>
 									<p>
-										 {{ sermons.content }}
+										 {{ sermons.content | safe }}
 									</p>
 								</div>
 							</div>

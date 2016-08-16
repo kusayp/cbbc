@@ -8,7 +8,7 @@ class WWB(models.Model):
 
 	"""
 	title = models.CharField(max_length=100)
-	content = models.CharField(max_length=1000)
+	content = models.TextField()
 	verses = models.CharField(max_length=500)
 	notes = models.CharField(max_length=500)
 	date = models.DateTimeField(auto_now_add=True)
@@ -22,7 +22,7 @@ class Message(models.Model):
 
 	"""
 	title = models.CharField(max_length=100)
-	content = models.CharField(max_length=1000)
+	content = models.TextField()
 	verses = models.CharField(max_length=500)
 	notes = models.CharField(max_length=500)
 	date = models.DateTimeField(auto_now_add=True)

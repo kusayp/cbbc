@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-{% block name %}{{name}}{% endblock %}
+{% block name %}{{name | safe}}{% endblock %}
 {% for item in titles %}
 <h3>Verse {{ forloop.counter }}</h3>
 <p style="margin-top: 20px;
   color: #5a7391;
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 7px;">{{item.content}}</p>
+  margin-bottom: 7px;">{{item.content | safe}}</p>
 {% if has_refrain == True %}
 <h4>Refrain:</h4>
 <em style="margin-top: 20px;
   color: #5a7391;
   font-size: 15px;
   font-weight: 600;
-  margin-bottom: 7px;">{{hymn}}</em>
+  margin-bottom: 7px;">{{hymn | safe}}</em>
 {% endif %}
 {% endfor %}
 {% endblock %}

@@ -3,58 +3,37 @@
 <div class="portlet light">
 	<div class="portlet-body">
 		<div class="row">
+		{% for item in address %}
 			<div class="col-md-12">
 				<!-- Google Map -->
-				<div class="row">
+				<!-- <div class="row">
 					<div id="map" class="gmaps margin-bottom-40" style="height:400px;">
 					</div>
-				</div> 
+				</div>  --><p style="height:200px;">
+							 {{item.notesadd}}
+						</p>
 				<div class="row margin-bottom-20">
-				{% for item in address %}
+				
 					<div class="col-md-6">
 						<div class="space20">
 						</div>
 						<h3 class="form-section">Contacts</h3>
-						<p>
-							 {{item.notesadd}}
-						</p>
+						
 						<div class="well">
 							<h4>Address</h4>
 							<address>
-							<strong>{{item.name}}</strong><br>
-							 {{item.box}}<br>
-							<abbr title="Phone">P:</abbr> {{item.phone}}</address>
+							<strong>{{item.name | safe}}</strong><br>
+							 {{item.box | safe}}<br>
+							<abbr title="Phone">P:</abbr> {{item.phone | safe}}</address>
 							<address>
 							<strong>Email</strong><br>
 							<a href="mailto:#">
-							{{item.email}} </a>
+							{{item.email | safe}} </a>
 							</address>
 							<address>
     							<strong>Location</strong><br>
-    								{{item.location}}
+    								{{item.location | safe}}
     						</address>
-							<ul class="social-icons margin-bottom-10">
-								<li>
-									<a href="javascript:;" data-original-title="facebook" class="facebook">
-									</a>
-								</li>
-								<li>
-									<a href="javascript:;" data-original-title="Goole Plus" class="googleplus">
-									</a>
-								</li>
-								<li>
-									<a href="javascript:;" data-original-title="skype" class="skype">
-									</a>
-								</li>
-								<li>
-									<a href="javascript:;" data-original-title="twitter" class="twitter">
-									</a>
-								</li>
-								<li>
-									<a href="javascript:;" data-original-title="youtube" class="youtube">
-									</a>
-								</li>
-							</ul>
 						</div>
 					</div>
 					{% endfor %}
@@ -64,11 +43,11 @@
 						<!-- BEGIN FORM-->
 						<form method="POST" action="." role="form">{% csrf_token %}
 							<h3 class="form-section">Feedback</h3>
-							{% for item in address %}
+							<!-- {% for item in address %}
 							<p>
-								 {{item.notesadd}}<!-- Please send us a feedback or a prayer request for the church to pray on your behalf -->
+								 {{item.notesadd}}Please send us a feedback or a prayer request for the church to pray on your behalf
 							{% endfor %}
-							</p>
+							</p> -->
 							<div class="form-group">
 								<div class="input-icon">
 									<i class="fa fa-check"></i>
@@ -90,13 +69,13 @@
 									{{ form.phone.errors }}
 								</div>
 							</div>
-							<div class="form-group">
+							<!-- <div class="form-group">
 							<label for="id_topic" style="display: block;">Prayer Request?:</label>
 								<div class="input-icon">
 									{{ form.is_prayer_request }}
 									{{ form.is_prayer_request.errors }}
 								</div>
-							</div>
+							</div> -->
 							<div class="form-group">
 								{{ form.content }}
 								{{ form.content.errors }}

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ajax_search',
     'aboutus',
     'contact',
     'events',
@@ -49,6 +50,10 @@ INSTALLED_APPS = [
     'resources',
     'hymn',
 ]
+
+# AJAX_SEARCH_LIMIT = 8
+# AJAX_SEARCH_HELPER = 'hymn.views.hymn'
+# SEARCH_RESULT_TEMPLATE = 'hymn_ls.html'
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',

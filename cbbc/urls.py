@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^resources/', include('resources.urls')),
     url(r'^cont/', include('contact.urls')),
     url(r'^hymn/', include('hymn.urls')),
+    url(r'^ajax_search/',include('ajax_search.urls')),
 ]
 

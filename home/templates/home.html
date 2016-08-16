@@ -9,9 +9,9 @@
             
             <div class="col-md-6">
             {% for item in titles %}
-              <h2>{{ item.title }}</h2> 
+              <h2>{{ item.title | safe }}</h2> 
                 <p>
-                {{ item.content }}
+                {{ item.content | safe}}
                    <!-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. -->
                 </p>
                
@@ -56,12 +56,12 @@
           <div class="tile-body" style="text-align: center;">
           <h3 style="padding-top:20px;">Latest Event coming off</h3>
           <div style=" padding-top: 60px;">
-            <h4>{{item.name}}</h4>
+            <h4>{{item.name | safe}}</h4>
             <p>
-               {{item.theme}}
+               {{item.theme | safe}}
             </p>
             <p>
-               {{item.date}} {{item.time}} confirmed location is {{item.location}}
+               {{item.date | safe}} {{item.time | safe}} confirmed location is {{item.location | safe}}
             </p>
             </div>
           </div>
@@ -86,16 +86,16 @@
    {% for item in pastors %}
         <div class="col-md-4">
           <div class="meet-our-team">
-            <h3>{{ item.name }} </h3><!-- <small>/ {{ item.role }}</small> -->
+            <h3>{{ item.name | safe }} </h3><!-- <small>/ {{ item.role }}</small> -->
             <div class="team-info">
               <p>
-                 {{ item.background }}
+                 {{ item.background | safe }}
               </p>
               <p>
-                {{ item.email}}
+                {{ item.email | safe}}
               </p>
               <p>
-                {{ item.phone}}
+                {{ item.phone | safe}}
               </p>
               <!-- <ul class="social-icons pull-right">
               <li>

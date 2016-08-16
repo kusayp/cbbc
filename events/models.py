@@ -10,7 +10,7 @@ class Event(models.Model):
 	theme_verse = models.CharField(max_length=100)
 	verse = models.CharField(max_length=500)
 	name = models.CharField(max_length=100)
-	details = models.CharField(max_length=1000)
+	details = models.TextField()
 	location = models.CharField(max_length=300)
 	time = models.TimeField(auto_now_add=False)
 	date = models.DateField(auto_now_add=False)

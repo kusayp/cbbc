@@ -6,16 +6,16 @@
       <div class="caption">
         <i class="icon-microphone font-purple-plum"></i>
         <span class="caption-subject bold font-purple-seance uppercase">
-        {{ title }} </span>
+        {{ title |safe }} </span>
         <!-- <span class="caption-helper">  Men Fellowship</span> -->
       </div>
     </div>
     <div class="portlet-body">
       <div class="scroller" style="height:700px" data-always-visible="1" data-rail-visible="1" data-rail-color="red" data-handle-color="green">
-        <p>{{item.content}}.</p>
+        <p>{{item.content|safe }}.</p>
         <h3>List of verses that talks to us about Salvation</h3>
-<p>{{item.verses}}.</p>
-<center><iframe src="http://player.vimeo.com/video/22439234" webkitallowfullscreen="" allowfullscreen="" frameborder="0" height="375" width="500"></iframe></center><p></p>
+<p>{{item.verses|safe }}.</p>
+<!-- <center><iframe src="http://player.vimeo.com/video/22439234" webkitallowfullscreen="" allowfullscreen="" frameborder="0" height="375" width="500"></iframe></center> --><p></p>
 </div>
     </div>
   </div>

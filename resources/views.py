@@ -3,7 +3,7 @@ from .models import *
 
 # Create your views here.
 def sermon(request):
-	sermons = Sermon.objects.order_by('-id')[:1]
+	sermons = Sermon.objects.order_by('-id')
 	context = {
 		'sermons' : sermons,
 		'title': 'Sermons',
@@ -19,33 +19,27 @@ def sermon_detail(request, sermon_id):
 	return render(request, 'sermon/sermon_detail.html', context)
 
 def devotion(request):
-	devotions = Devotion.objects.order_by('-id')[:1]
+	devotions = Devotion.objects.order_by('-id')
 	context = {
 		'devotions' : devotions,
 		'title': 'Devotions',
 	}
 	return render(request, 'devotion/devotion.html', context)
 
-def devotion_detail(request, devotion_id):
-	devotion = get_object_or_404(Devotion, pk=devotion_id)
-	context = {
-		'devotion' : devotion,
-		'title': 'Devotions',
-	}
-	return render(request, 'devotion/devotion_detail.html', context)
+# def devotion_detail(request, devotion_id):
+# 	devotion = get_object_or_404(Devotion, pk=devotion_id)
+# 	context = {
+# 		'devotion' : devotion,
+# 		'title': 'Devotions',
+# 	}
+# 	return render(request, 'devotion/devotion_detail.html', context)
 
 def teaching(request):
-	teachings = Teaching.objects.order_by('-id')[:1]
+	teachings = Teaching.objects.order_by('-id')
 	context = {
 		'teachings' : teachings,
 		'title': 'Teachings',
 	}
 	return render(request, 'teaching/teaching.html', context)
 
-def teaching_detail(request, teaching_id):
-	teaching = get_object_or_404(Teaching, pk=teaching_id)
-	context = {
-		'teaching' : teaching,
-		'title': 'Teachings',
-	}
-	return render(request, 'teaching/teaching_detail.html', context)
+

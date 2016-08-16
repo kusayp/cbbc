@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
+<!-- <form class="searchfield" method="get" action="{% url 'search' %}" autocomplete="off">
+  {{ searchform.q }}
+  <input id="searchbuttonmain" type="submit" class="subbtn" value="Search">
+</form>
+<div id='searchdropdown'></div> -->
 	{% for item in titles %}
-		<li><a href="{% url 'stanza_detail' item.id %}">{{ item.name }}</a></li>
+		<li><a href="{% url 'stanza_detail' item.id %}">{{ item.name | safe }}</a></li>
 		{% endfor %}
 {% endblock %}

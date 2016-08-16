@@ -3,7 +3,7 @@ from .models import *
 
 # Create your views here.
 def event(request):
-	events = Event.objects.order_by('-id')[:1]
+	events = Event.objects.order_by('-id')
 	context = {
 		'events' : events,
 		'title': 'Events',
@@ -16,4 +16,4 @@ def event_detail(request, event_id):
 		'events' : events,
 		'title': 'Events',
 	}
-	return render(request, 'event_details.html', context)
+	return render(request, 'event_detail.html', context)

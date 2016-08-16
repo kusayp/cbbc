@@ -13,13 +13,13 @@
       <div class="scroller" style="height:400px" data-always-visible="1" data-rail-visible="1" data-rail-color="red" data-handle-color="green">
         <h3>Our Purpose</h3>
         {% for item in childrens %}
-        <h4>{{item.name}}</h4>
-        <p>{{item.content}}</p>
+        <h4>{{item.name | safe}}</h4>
+        <p>{{item.content | safe}}</p>
         {% endfor %}
 <h3>Meeting Schedule:</h3>
 {% for items in childrens %}
-{{items.time}}<br>
-{{items.location}}<br>
+{{items.time | safe}}<br>
+{{items.location | safe}}<br>
 {% endfor %}
       </div>
     </div></div>

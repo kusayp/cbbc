@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from .models import *
+from ajax_search.forms import SearchForm
 
 def hymn(request):
 	details = Hymn.objects.order_by('name')
 	context = {
 		'titles' : details,
+		'searchform':SearchForm(),
 		'title': 'Hymn',
 	}
 	return render(request, 'hymn_ls.html', context)

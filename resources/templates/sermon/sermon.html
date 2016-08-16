@@ -2,7 +2,7 @@
 {% block content %}
 <ul>
 {% for item in sermons %}
-	<li><a href="{% url 'sermon_detail' item.id %}">{{ item.title }}</a></li>
+	<li><a href="{% url 'sermon_detail' item.id %}">{{ item.title | safe }}</a></li>
 {% endfor %}
 </ul>
 {% endblock %}

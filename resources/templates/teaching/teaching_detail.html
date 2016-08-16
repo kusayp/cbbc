@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-	<h2>{{ sermons.title }}</h2>
-	<p>{{ sermons.content }}</p>
+	<h2>{{ teaching.title | safe }}</h2>
+	<p>{{ teaching.content | safe }}</p>
 
 {% endblock %}
